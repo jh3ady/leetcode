@@ -1,0 +1,27 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - dependabot
+      - github-actions
+  categories:
+    - title: "New problems"
+      labels:
+        - "problem"
+    - title: "Features"
+      labels:
+        - "enhancement"
+    - title: "Bug fixes"
+      labels:
+        - "bug"
+    - title: "Documentation"
+      labels:
+        - "docs"
+    - title: "CI & Tooling"
+      labels:
+        - "ci"
+        - "chore"
+    - title: "Other changes"
+      labels:
+        - "*"

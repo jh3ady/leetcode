@@ -1,0 +1,15 @@
+{
+  "$schema": "./scripts/problems.schema.json",
+  "problems": [
+    {
+      "id": 1,
+      "slug": "two-sum",
+      "title": "Two Sum",
+      "difficulty": "easy",
+      "url": "https://leetcode.com/problems/two-sum/",
+      "tags": ["array", "hash-map"],
+      "solvedAt": "2026-04-20",
+      "languages": ["rs", "ts", "php"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+name: Close stale issues
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 60
+          days-before-close: 14
+          stale-issue-message: "This issue has been idle for 60 days. It will close in 14 days unless there is new activity."
+          stale-pr-message: "This PR has been idle for 60 days. It will close in 14 days unless there is new activity."
+          close-issue-message: "Closing due to inactivity. Feel free to reopen if still relevant."
+          close-pr-message: "Closing due to inactivity. Feel free to reopen if still relevant."
+          exempt-issue-labels: "pinned,security,keep-open"
+          exempt-pr-labels: "pinned,security,keep-open"

@@ -1,0 +1,21 @@
+[package]
+name = "leetcode-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.80"
+description = "LeetCode solutions in Rust, TDD-driven."
+license = "MIT"
+repository = "https://github.com/jh3ady/leetcode"
+readme = "README.md"
+authors = ["Jean-Denis VIDOT <admin@jdevelop.io>"]
+keywords = ["leetcode", "algorithms", "tdd"]
+categories = ["algorithms"]
+publish = false
+
+[lib]
+name = "leetcode"
+path = "src/lib.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

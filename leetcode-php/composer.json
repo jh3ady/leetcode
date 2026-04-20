@@ -1,0 +1,45 @@
+{
+  "name": "jh3ady/leetcode-php",
+  "description": "LeetCode solutions in PHP, TDD-driven.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["leetcode", "algorithms", "tdd"],
+  "authors": [
+    {
+      "name": "Jean-Denis VIDOT",
+      "email": "admin@jdevelop.io"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "JH3ady\\LeetCode\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JH3ady\\LeetCode\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "coverage": "XDEBUG_MODE=coverage phpunit --coverage-text",
+    "lint": ["@analyse", "@cs-check"],
+    "analyse": "phpstan analyse",
+    "cs-check": "php-cs-fixer fix --dry-run --diff",
+    "format": "php-cs-fixer fix"
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.5.0"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.95",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^13.1"
+  }
+}

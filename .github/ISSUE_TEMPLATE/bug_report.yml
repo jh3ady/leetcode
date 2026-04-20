@@ -1,0 +1,59 @@
+name: Bug report
+description: Report an incorrect solution, broken tooling, or a failing test.
+title: "[bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - leetcode-rs
+        - leetcode-ts
+        - leetcode-php
+        - scripts
+        - ci
+        - docs
+    validations:
+      required: true
+  - type: input
+    id: problem
+    attributes:
+      label: Problem ID (if applicable)
+      placeholder: e.g. 42
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Run `pnpm test:rs`
+        2. ...
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: |
+        - OS: macOS 15.4
+        - Node: 24.x
+        - Rust: 1.94
+        - PHP: 8.5

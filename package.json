@@ -1,0 +1,56 @@
+{
+  "name": "@jh3ady/leetcode",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Daily LeetCode problems solved in Rust, TypeScript and PHP using TDD.",
+  "license": "MIT",
+  "author": "Jean-Denis VIDOT <admin@jdevelop.io>",
+  "homepage": "https://github.com/jh3ady/leetcode#readme",
+  "bugs": {
+    "url": "https://github.com/jh3ady/leetcode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jh3ady/leetcode.git"
+  },
+  "keywords": [
+    "leetcode",
+    "algorithms",
+    "data-structures",
+    "tdd",
+    "rust",
+    "typescript",
+    "php",
+    "monorepo",
+    "interview"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@10.19.0",
+  "workspaces": [
+    "leetcode-ts"
+  ],
+  "scripts": {
+    "new": "node scripts/new-problem.mjs",
+    "readme": "node scripts/generate-readme.mjs",
+    "test": "pnpm run test:ts && pnpm run test:rs && pnpm run test:php",
+    "test:ts": "pnpm --filter leetcode-ts test",
+    "test:rs": "cargo test --manifest-path leetcode-rs/Cargo.toml",
+    "test:php": "composer -d leetcode-php test",
+    "lint": "pnpm run lint:js && pnpm run lint:rs && pnpm run lint:php",
+    "lint:js": "biome check",
+    "lint:rs": "cargo clippy --manifest-path leetcode-rs/Cargo.toml --all-targets -- -D warnings && cargo fmt --manifest-path leetcode-rs/Cargo.toml --check",
+    "lint:php": "composer -d leetcode-php lint",
+    "format": "pnpm run format:js && pnpm run format:rs && pnpm run format:php",
+    "format:js": "biome format --write",
+    "format:rs": "cargo fmt --manifest-path leetcode-rs/Cargo.toml",
+    "format:php": "composer -d leetcode-php format",
+    "check": "biome check --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12"
+  }
+}

@@ -1,0 +1,32 @@
+rust:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'leetcode-rs/**'
+
+typescript:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'leetcode-ts/**'
+
+php:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'leetcode-php/**'
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '.github/dependabot.yml'
+          - '.github/labeler.yml'
+
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.md'
+          - 'docs/**'
+
+scripts:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'scripts/**'

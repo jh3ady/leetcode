@@ -1,0 +1,10 @@
+# Every file
+* @jh3ady
+
+# Per-language owners (add more maintainers here as the project grows)
+/leetcode-rs/   @jh3ady
+/leetcode-ts/   @jh3ady
+/leetcode-php/  @jh3ady
+
+# CI and community files
+/.github/       @jh3ady

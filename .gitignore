@@ -1,0 +1,61 @@
+# ---- OS ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- Editors / IDEs ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.fleet/
+.zed/
+
+# ---- Env ----
+.env
+.env.*
+!.env.example
+
+# ---- Logs ----
+*.log
+logs/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Node / TypeScript ----
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+coverage/
+.nyc_output/
+dist/
+build/
+.tsbuildinfo
+*.tsbuildinfo
+.eslintcache
+.cache/
+.turbo/
+.vitest-cache/
+
+# ---- Rust ----
+target/
+**/*.rs.bk
+Cargo.lock.bak
+
+# ---- PHP ----
+vendor/
+.phpunit.cache/
+.phpunit.result.cache
+.php-cs-fixer.cache
+.phpstan.cache/
+composer.phar
+
+# ---- Misc ----
+tmp/
+.tmp/
+.history/
+.local/

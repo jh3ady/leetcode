@@ -1,0 +1,40 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: ":arrow_up: ci"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: "increase"
+    commit-message:
+      prefix: ":arrow_up: chore"
+      include: "scope"
+
+  - package-ecosystem: "npm"
+    directory: "/leetcode-ts"
+    schedule:
+      interval: "weekly"
+    versioning-strategy: "increase"
+    commit-message:
+      prefix: ":arrow_up: chore"
+      include: "scope"
+
+  - package-ecosystem: "cargo"
+    directory: "/leetcode-rs"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: ":arrow_up: chore"
+
+  - package-ecosystem: "composer"
+    directory: "/leetcode-php"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: ":arrow_up: chore"

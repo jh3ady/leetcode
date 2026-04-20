@@ -1,0 +1,45 @@
+name: New problem request
+description: Suggest a LeetCode problem to solve next.
+title: "[problem]: "
+labels: ["problem", "good first issue"]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: LeetCode problem number
+      placeholder: e.g. 42
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      placeholder: e.g. Trapping Rain Water
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://leetcode.com/problems/trapping-rain-water/
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options: [easy, medium, hard]
+    validations:
+      required: true
+  - type: checkboxes
+    id: languages
+    attributes:
+      label: Languages you would like to see
+      options:
+        - label: Rust
+        - label: TypeScript
+        - label: PHP
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / constraints
