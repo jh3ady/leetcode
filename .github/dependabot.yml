@@ -6,6 +6,16 @@ updates:
       interval: "weekly"
     commit-message:
       prefix: ":arrow_up: ci"
+    ignore:
+      # pnpm/action-setup v5+ bundles pnpm 11 (still RC as of 2026-04) and
+      # rejects our pnpm 10 lockfile. Revisit once pnpm 11 stable ships.
+      - dependency-name: "pnpm/action-setup"
+        update-types: ["version-update:semver-major"]
+    ignore:
+      # pnpm/action-setup v5+ bundles pnpm 11 which rejects our lockfile v9.
+      # Revisit when the repo migrates to pnpm 11.
+      - dependency-name: "pnpm/action-setup"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "npm"
     directory: "/"
