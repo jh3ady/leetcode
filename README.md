@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
 [![Rust](https://img.shields.io/badge/Rust-stable-orange?logo=rust&logoColor=white)](./leetcode-rs)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript&logoColor=white)](./leetcode-ts)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-blue?logo=typescript&logoColor=white)](./leetcode-ts)
 [![PHP](https://img.shields.io/badge/PHP-8.5+-777bb4?logo=php&logoColor=white)](./leetcode-php)
 
 One LeetCode problem per day, solved in Rust, TypeScript and PHP, strictly test-driven.
