@@ -4,7 +4,7 @@
   "private": true,
   "description": "Daily LeetCode problems solved in Rust, TypeScript and PHP using TDD.",
   "license": "MIT",
-  "author": "Jean-Denis VIDOT <admin@jdevelop.io>",
+  "author": "Jean-Denis VIDOT <contact@jdevelop.io>",
   "homepage": "https://github.com/jh3ady/leetcode#readme",
   "bugs": {
     "url": "https://github.com/jh3ady/leetcode/issues"

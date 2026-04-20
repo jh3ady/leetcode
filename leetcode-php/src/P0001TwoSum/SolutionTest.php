@@ -2,21 +2,20 @@
 
 declare(strict_types=1);
 
-namespace JH3ady\LeetCode\Tests;
+namespace JH3ady\LeetCode\P0001TwoSum;
 
-use JH3ady\LeetCode\P0001TwoSum;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-#[CoversClass(P0001TwoSum::class)]
-final class P0001TwoSumTest extends TestCase
+#[CoversClass(Solution::class)]
+final class SolutionTest extends TestCase
 {
-    private P0001TwoSum $solver;
+    private Solution $solver;
 
     protected function setUp(): void
     {
-        $this->solver = new P0001TwoSum();
+        $this->solver = new Solution();
     }
 
     #[Test]

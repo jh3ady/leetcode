@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace JH3ady\LeetCode;
+namespace JH3ady\LeetCode\P0001TwoSum;
 
 /**
  * [1. Two Sum](https://leetcode.com/problems/two-sum/) — easy.
@@ -13,7 +13,7 @@ namespace JH3ady\LeetCode;
  *
  * Complexity: O(n) time, O(n) space.
  */
-final class P0001TwoSum
+final class Solution
 {
     /**
      * @param list<int> $nums

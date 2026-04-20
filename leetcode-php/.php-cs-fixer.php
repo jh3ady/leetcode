@@ -6,7 +6,7 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = (new Finder())
-    ->in([__DIR__.'/src', __DIR__.'/tests'])
+    ->in([__DIR__.'/src'])
     ->name('*.php');
 
 return (new Config())

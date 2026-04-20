@@ -11,6 +11,6 @@ The code in this repository is educational (algorithmic puzzles). It is not inte
 Preferred channels:
 
 1. GitHub Security Advisories: <https://github.com/jh3ady/leetcode/security/advisories/new>
-2. Email: **admin@jdevelop.io**
+2. Email: **contact@jdevelop.io**
 
 Please do not open a public issue for undisclosed vulnerabilities. You will get an acknowledgement within 72 hours.

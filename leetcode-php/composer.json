@@ -7,17 +7,18 @@
   "authors": [
     {
       "name": "Jean-Denis VIDOT",
-      "email": "admin@jdevelop.io"
+      "email": "contact@jdevelop.io"
     }
   ],
   "autoload": {
     "psr-4": {
       "JH3ady\\LeetCode\\": "src/"
-    }
+    },
+    "exclude-from-classmap": ["src/**/*Test.php"]
   },
   "autoload-dev": {
     "psr-4": {
-      "JH3ady\\LeetCode\\Tests\\": "tests/"
+      "JH3ady\\LeetCode\\": "src/"
     }
   },
   "scripts": {

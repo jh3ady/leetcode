@@ -1,6 +1,6 @@
 # leetcode-php
 
-PHP 8.3+ solutions for the [leetcode monorepo](../README.md). Each problem is a single `final` class in `src/` (PSR-4 namespace `JH3ady\LeetCode`) with a PHPUnit test in `tests/`.
+PHP 8.5+ solutions for the [leetcode monorepo](../README.md). Each problem lives in its own folder under `src/PXXXX<Slug>/` with a `Solution.php` and a colocated `SolutionTest.php` (PSR-4 namespace `JH3ady\LeetCode\PXXXX<Slug>`).
 
 ## Run
 

@@ -149,24 +149,28 @@ describe('p${padded} \u2014 ${slug}', () => {
 
 async function scaffoldPhp({ id, slug, title, url, difficulty }) {
   const padded = padId(id);
-  const className = `P${padded}${slugToPascal(slug)}`;
-  const srcFile = resolve(repoRoot, 'leetcode-php/src', `${className}.php`);
-  const testFile = resolve(repoRoot, 'leetcode-php/tests', `${className}Test.php`);
+  const folderName = `P${padded}${slugToPascal(slug)}`;
+  const dir = resolve(repoRoot, 'leetcode-php/src', folderName);
+  await mkdir(dir, { recursive: true });
+  const srcFile = resolve(dir, 'Solution.php');
+  const testFile = resolve(dir, 'SolutionTest.php');
 
   const src = `<?php
 
 declare(strict_types=1);
 
-namespace JH3ady\\LeetCode;
+namespace JH3ady\\LeetCode\\${folderName};
+
+use RuntimeException;
 
 /**
  * [${id}. ${title}](${url}) \u2014 ${difficulty}.
  */
-final class ${className}
+final class Solution
 {
     public function solve(): mixed
     {
-        throw new \\RuntimeException('not implemented');
+        throw new RuntimeException('not implemented');
     }
 }
 `;
@@ -175,20 +179,19 @@ final class ${className}
 
 declare(strict_types=1);
 
-namespace JH3ady\\LeetCode\\Tests;
+namespace JH3ady\\LeetCode\\${folderName};
 
-use JH3ady\\LeetCode\\${className};
 use PHPUnit\\Framework\\Attributes\\CoversClass;
 use PHPUnit\\Framework\\Attributes\\Test;
 use PHPUnit\\Framework\\TestCase;
 
-#[CoversClass(${className}::class)]
-final class ${className}Test extends TestCase
+#[CoversClass(Solution::class)]
+final class SolutionTest extends TestCase
 {
     #[Test]
     public function tddPlaceholderFailsUntilImplemented(): void
     {
-        $solver = new ${className}();
+        $solver = new Solution();
         self::assertSame('replace with real expectations', $solver->solve());
     }
 }
