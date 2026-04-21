@@ -10,6 +10,16 @@
       "tags": ["array", "hash-map"],
       "solvedAt": "2026-04-20",
       "languages": ["rs", "ts", "php"]
+    },
+    {
+      "id": 2,
+      "slug": "add-two-numbers",
+      "title": "Add Two Numbers",
+      "difficulty": "medium",
+      "url": "https://leetcode.com/problems/add-two-numbers/",
+      "tags": ["linked-list", "math", "recursion"],
+      "solvedAt": "2026-04-21",
+      "languages": ["rs", "ts", "php"]
     }
   ]
 }

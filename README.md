@@ -51,6 +51,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full workflow.
 | # | Title | Difficulty | Rust | TypeScript | PHP | Solved on | Tags |
 |---|-------|------------|:----:|:----------:|:---:|-----------|------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | easy | ✅ | ✅ | ✅ | 2026-04-20 | `array`, `hash-map` |
+| 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | medium | ✅ | ✅ | ✅ | 2026-04-21 | `linked-list`, `math`, `recursion` |
 <!-- problems:end -->
 
 ## Stack
