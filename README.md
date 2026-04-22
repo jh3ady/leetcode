@@ -52,6 +52,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full workflow.
 |---|-------|------------|:----:|:----------:|:---:|-----------|------|
 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | easy | ✅ | ✅ | ✅ | 2026-04-20 | `array`, `hash-map` |
 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | medium | ✅ | ✅ | ✅ | 2026-04-21 | `linked-list`, `math`, `recursion` |
+| 3 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | medium | ✅ | ✅ | ✅ | 2026-04-22 | `string`, `hash-table`, `sliding-window` |
 <!-- problems:end -->
 
 ## Stack
