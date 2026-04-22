@@ -16,18 +16,19 @@ final class Solution
 {
     public function lengthOfLongestSubstring(string $s): int
     {
-        /** @var array<string, int> $lastIndex */
-        $lastIndex = [];
+        /** @var array<string, true> $seen */
+        $seen = [];
         $left = 0;
         $best = 0;
         $length = strlen($s);
 
         for ($right = 0; $right < $length; $right++) {
             $ch = $s[$right];
-            if (isset($lastIndex[$ch]) && $lastIndex[$ch] >= $left) {
-                $left = $lastIndex[$ch] + 1;
+            while (isset($seen[$ch])) {
+                unset($seen[$s[$left]]);
+                $left++;
             }
-            $lastIndex[$ch] = $right;
+            $seen[$ch] = true;
             $windowLength = $right - $left + 1;
             if ($windowLength > $best) {
                 $best = $windowLength;

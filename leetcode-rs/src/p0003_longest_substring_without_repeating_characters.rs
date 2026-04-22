@@ -3,7 +3,7 @@
 //! Given a string, return the length of the longest substring that contains
 //! no repeated character.
 
-use std::collections::HashMap;
+use std::collections::HashSet;
 
 /// Length of the longest substring of `s` without repeating characters.
 ///
@@ -12,17 +12,17 @@ use std::collections::HashMap;
 #[must_use]
 #[allow(clippy::cast_possible_truncation, clippy::cast_possible_wrap)]
 pub fn length_of_longest_substring(s: &str) -> i32 {
-    let mut last_index: HashMap<char, usize> = HashMap::new();
+    let bytes = s.as_bytes();
+    let mut seen: HashSet<u8> = HashSet::new();
     let mut left = 0usize;
     let mut best = 0usize;
 
-    for (right, ch) in s.chars().enumerate() {
-        if let Some(&previous) = last_index.get(&ch) {
-            if previous >= left {
-                left = previous + 1;
-            }
+    for (right, &ch) in bytes.iter().enumerate() {
+        while seen.contains(&ch) {
+            seen.remove(&bytes[left]);
+            left += 1;
         }
-        last_index.insert(ch, right);
+        seen.insert(ch);
         let window_length = right - left + 1;
         if window_length > best {
             best = window_length;
